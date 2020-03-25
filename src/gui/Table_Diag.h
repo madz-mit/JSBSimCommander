@@ -21,6 +21,7 @@
 #include "wx/plot/plot.h"
 // end wxGlade
 #include <vector>
+#include <algorithm>
 
 #ifndef TABLE_DIAG_H
 #define TABLE_DIAG_H
@@ -31,6 +32,7 @@ class MyPlotCurve;
 class MyPlotCurve4D;
 
 std::vector<double> readNumsfromClipboard();
+
 
 class TableDialog: public wxDialog {
 public:
@@ -143,10 +145,10 @@ protected:
     void clearCurves();
     std::vector< MyPlotCurve4D * > curves;
 
-    void TableDialog::OnDetailRow(wxCommandEvent & event);
-    void TableDialog::OnDetailCol(wxCommandEvent & event);
-    void TableDialog::OnDetailTab(wxCommandEvent & event);
-    void TableDialog::OnDetailFrm(wxCommandEvent & event);
+    void /*TableDialog::*/OnDetailRow(wxCommandEvent & event);
+    void /*TableDialog::*/OnDetailCol(wxCommandEvent & event);
+    void /*TableDialog::*/OnDetailTab(wxCommandEvent & event);
+    void /*TableDialog::*/OnDetailFrm(wxCommandEvent & event);
     void OnChsRow(wxCommandEvent & event);
     void OnChsCol(wxCommandEvent & event);
     void OnChsTab(wxCommandEvent & event);

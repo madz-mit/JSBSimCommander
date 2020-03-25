@@ -127,8 +127,8 @@ void DiagramDocument::Import(JSBSim::Element * el)
       shape->SetType(wxString(type.c_str()));
       wxArrayString inputs = shape->ImportXML(component);
       shape->SetCentreResize (false);
-      shape->SetPen (wxBLACK_PEN);
-      shape->SetBrush (wxWHITE_BRUSH);
+      shape->SetPen ((wxPen*)wxBLACK_PEN);
+      shape->SetBrush ((wxBrush*)wxWHITE_BRUSH);
       shape->SetSize (50, 50);
 
       box_mgr.Add(shape, inputs);
@@ -319,8 +319,8 @@ TBoxMgr::combine(ComponentShape * shape, const wxArrayString & inputs, boxlist_i
       wxLineShape  * line = new wxLineShape;
       line->AssignNewIds ();
       line->SetEventHandler(new MyEvtHandler(line, line));
-      line->SetPen (wxBLACK_PEN);
-      line->SetBrush (wxRED_BRUSH);
+      line->SetPen ((wxPen*)wxBLACK_PEN);
+      line->SetBrush ((wxBrush*)wxRED_BRUSH);
       line->MakeLineControlPoints (2);
       line->AddArrow (ARROW_ARROW, ARROW_POSITION_END, 10.0, 0.0,
           _T ("Normal arrowhead"));
@@ -348,8 +348,8 @@ TBoxMgr::combine(ComponentShape * shape, const wxArrayString & inputs, boxlist_i
       sshape->AssignNewIds ();
       sshape->SetEventHandler(new MyEvtHandler(sshape, sshape));
       sshape->SetCentreResize (false);
-      sshape->SetPen (wxBLACK_PEN);
-      sshape->SetBrush (wxWHITE_BRUSH);
+      sshape->SetPen ((wxPen*)wxBLACK_PEN);
+      sshape->SetBrush ((wxBrush*)wxWHITE_BRUSH);
       sshape->SetSize (50, 50);
       diagram->AddShape (sshape);
       sshape->SetName(str);
@@ -363,8 +363,8 @@ TBoxMgr::combine(ComponentShape * shape, const wxArrayString & inputs, boxlist_i
       wxLineShape  * line = new wxLineShape;
       line->AssignNewIds ();
       line->SetEventHandler(new MyEvtHandler(line, line));
-      line->SetPen (wxBLACK_PEN);
-      line->SetBrush (wxRED_BRUSH);
+      line->SetPen ((wxPen*)wxBLACK_PEN);
+      line->SetBrush ((wxBrush*)wxRED_BRUSH);
       line->MakeLineControlPoints (2);
       line->AddArrow (ARROW_ARROW, ARROW_POSITION_END, 10.0, 0.0,
           _T ("Normal arrowhead"));
@@ -396,8 +396,8 @@ TBoxMgr::combine(ComponentShape * shape, const wxArrayString & inputs, boxlist_i
     dshape->AssignNewIds ();
     dshape->SetEventHandler(new MyEvtHandler(dshape, dshape));
     dshape->SetCentreResize (false);
-    dshape->SetPen (wxBLACK_PEN);
-    dshape->SetBrush (wxWHITE_BRUSH);
+    dshape->SetPen ((wxPen*)wxBLACK_PEN);
+    dshape->SetBrush ((wxBrush*)wxWHITE_BRUSH);
     dshape->SetSize (50, 50);
     diagram->AddShape (dshape);
     dshape->SetName(inputs[0]);
@@ -409,8 +409,8 @@ TBoxMgr::combine(ComponentShape * shape, const wxArrayString & inputs, boxlist_i
     wxLineShape  * line = new wxLineShape;
     line->AssignNewIds ();
     line->SetEventHandler(new MyEvtHandler(line, line));
-    line->SetPen (wxBLACK_PEN);
-    line->SetBrush (wxRED_BRUSH);
+    line->SetPen ((wxPen*)wxBLACK_PEN);
+    line->SetBrush ((wxBrush*)wxRED_BRUSH);
     line->MakeLineControlPoints (2);
     line->AddArrow (ARROW_ARROW, ARROW_POSITION_END, 10.0, 0.0,
         _T ("Normal arrowhead"));

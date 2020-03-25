@@ -967,7 +967,7 @@ void wxLineShape::OnDrawOutline(wxDC& dc, double WXUNUSED(x), double WXUNUSED(y)
 
   wxPen dottedPen(*wxBLACK, 1, wxDOT);
   SetPen(& dottedPen);
-  SetBrush( wxTRANSPARENT_BRUSH );
+  SetBrush( (wxBrush*)wxTRANSPARENT_BRUSH );
 
   GetEventHandler()->OnDraw(dc);
 
@@ -1751,7 +1751,7 @@ void wxLineShape::OnSizingDragLeft(wxControlPoint* pt, bool WXUNUSED(draw), doub
 
     wxPen dottedPen(*wxBLACK, 1, wxDOT);
     lineShape->SetPen(& dottedPen);
-    lineShape->SetBrush(wxTRANSPARENT_BRUSH);
+    lineShape->SetBrush((wxBrush*)wxTRANSPARENT_BRUSH);
 
     lineShape->GetEventHandler()->OnMoveLink(dc, false);
 
@@ -1799,7 +1799,7 @@ void wxLineShape::OnSizingBeginDragLeft(wxControlPoint* pt, double x, double y, 
 
     wxPen dottedPen(*wxBLACK, 1, wxDOT);
     lineShape->SetPen(& dottedPen);
-    lineShape->SetBrush(wxTRANSPARENT_BRUSH);
+    lineShape->SetBrush((wxBrush*)wxTRANSPARENT_BRUSH);
 
     lineShape->GetEventHandler()->OnMoveLink(dc, false);
 
@@ -1810,7 +1810,7 @@ void wxLineShape::OnSizingBeginDragLeft(wxControlPoint* pt, double x, double y, 
   if (lpt->m_type == CONTROL_POINT_ENDPOINT_FROM || lpt->m_type == CONTROL_POINT_ENDPOINT_TO)
   {
     m_canvas->SetCursor(wxCursor(wxCURSOR_BULLSEYE));
-    lpt->m_oldCursor = wxSTANDARD_CURSOR;
+    lpt->m_oldCursor = (wxCursor*)wxSTANDARD_CURSOR;
   }
 }
 

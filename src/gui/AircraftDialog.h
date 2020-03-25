@@ -20,6 +20,7 @@
 #include <wx/treectrl.h>
 #include <wx/notebook.h>
 #include <wx/grid.h>
+#include <wx/imaglist.h>
 // end wxGlade
 
 

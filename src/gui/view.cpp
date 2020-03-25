@@ -137,8 +137,8 @@ MyCanvas::OnLeftClick (double x, double y, int WXUNUSED (keys))
 	      theShape->AssignNewIds ();
 	      theShape->SetEventHandler(new MyEvtHandler(theShape, theShape));
 	      theShape->SetCentreResize (false);
-	      theShape->SetPen (wxBLACK_PEN);
-	      theShape->SetBrush (wxWHITE_BRUSH);
+	      theShape->SetPen ((wxPen*)wxBLACK_PEN);
+	      theShape->SetBrush ((wxBrush*)wxWHITE_BRUSH);
 	      if (theShape->IsKindOf(CLASSINFO(SIMOShape)))
 	        theShape->SetSize (10, 10);
 	      else  

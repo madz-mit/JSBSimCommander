@@ -79,7 +79,7 @@ MyApp::OnInit (void)
   dlg = new AircraftDialog (NULL, -1);
 
   //// Give it an icon
-  dlg->SetIcon (wxICON (ogl));
+  //dlg->SetIcon (wxICON (ogl));
 
   property_dialog = new PropertyDialog(dlg, -1, _("Properties"), wxDefaultPosition, wxSize(825,580));
   {

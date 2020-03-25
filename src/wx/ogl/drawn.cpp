@@ -1624,7 +1624,7 @@ void wxPseudoMetaFile::ReadAttributes(wxExpr *clause, int whichAngle)
           wxColour col(penRed, penGreen, penBlue);
           wxPen *p = wxThePenList->FindOrCreatePen(col, penWidth, penStyle);
           if (!p)
-            p = wxBLACK_PEN;
+            p = (wxPen*)wxBLACK_PEN;
           m_gdiObjects.Append(p);
           break;
         }
@@ -1637,7 +1637,7 @@ void wxPseudoMetaFile::ReadAttributes(wxExpr *clause, int whichAngle)
           wxColour col(brushRed, brushGreen, brushBlue);
           wxBrush *b = wxTheBrushList->FindOrCreateBrush(col, brushStyle);
           if (!b)
-            b = wxWHITE_BRUSH;
+            b = (wxBrush*)wxWHITE_BRUSH;
           m_gdiObjects.Append(b);
           break;
         }

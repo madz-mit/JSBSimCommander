@@ -819,8 +819,8 @@ wxDivisionShape::wxDivisionShape()
   m_topSide = NULL;
   m_bottomSide = NULL;
   m_handleSide = DIVISION_SIDE_NONE;
-  m_leftSidePen = wxBLACK_PEN;
-  m_topSidePen = wxBLACK_PEN;
+  m_leftSidePen = (wxPen*)wxBLACK_PEN;
+  m_topSidePen = (wxPen*)wxBLACK_PEN;
   m_leftSideColour = wxT("BLACK");
   m_topSideColour = wxT("BLACK");
   m_leftSideStyle = wxT("Solid");

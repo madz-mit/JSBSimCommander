@@ -273,7 +273,7 @@ wxShape::wxShape(wxShapeCanvas *can)
   m_canvas = can;
   m_xpos = 0.0; m_ypos = 0.0;
   m_pen = g_oglBlackPen;
-  m_brush = wxWHITE_BRUSH;
+  m_brush = (wxBrush*)wxWHITE_BRUSH;
   m_font = g_oglNormalFont;
   m_textColour = wxT("BLACK");
   m_textColourName = wxT("BLACK");
@@ -292,7 +292,7 @@ wxShape::wxShape(wxShapeCanvas *can)
   m_shadowMode = SHADOW_NONE;
   m_shadowOffsetX = 6;
   m_shadowOffsetY = 6;
-  m_shadowBrush = wxBLACK_BRUSH;
+  m_shadowBrush = (wxBrush*)wxBLACK_BRUSH;
   m_textMarginX = 5;
   m_textMarginY = 5;
   m_regionName = wxT("0");
@@ -2011,7 +2011,7 @@ void wxShape::ReadAttributes(wxExpr *clause)
     m_pen = wxThePenList->FindOrCreatePen(pen_string, pen_width, pen_style);
 
   if (!m_pen)
-    m_pen = wxBLACK_PEN;
+    m_pen = (wxPen*)wxBLACK_PEN;
 
   if (brush_string.GetChar(0) == '#')
   {
@@ -2022,7 +2022,7 @@ void wxShape::ReadAttributes(wxExpr *clause)
     m_brush = wxTheBrushList->FindOrCreateBrush(brush_string, brush_style);
 
   if (!m_brush)
-    m_brush = wxWHITE_BRUSH;
+    m_brush = (wxBrush*)wxWHITE_BRUSH;
 
   int point_size = 10;
   clause->GetAttributeValue(_T("point_size"), point_size);

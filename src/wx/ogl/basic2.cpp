@@ -1230,7 +1230,7 @@ wxControlPoint::wxControlPoint(wxShapeCanvas *theCanvas, wxShape *object, double
   m_yoffset = the_yoffset;
   m_type = the_type;
   SetPen(g_oglBlackForegroundPen);
-  SetBrush(wxBLACK_BRUSH);
+  SetBrush((wxBrush*)wxBLACK_BRUSH);
   m_oldCursor = NULL;
   m_visible = true;
   m_eraseObject = true;

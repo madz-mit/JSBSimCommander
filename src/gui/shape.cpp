@@ -232,8 +232,8 @@ MyEvtHandler::OnEndDragRight (double x, double y, int WXUNUSED (keys),
 	    theShape = new wxLineShape;
 	    theShape->AssignNewIds ();
 	    theShape->SetEventHandler(new MyEvtHandler(theShape, theShape));
-	    theShape->SetPen (wxBLACK_PEN);
-	    theShape->SetBrush (wxRED_BRUSH);
+	    theShape->SetPen ((wxPen*)wxBLACK_PEN);
+	    theShape->SetBrush ((wxBrush*)wxRED_BRUSH);
 
 	    wxLineShape *lineShape = theShape;
 
